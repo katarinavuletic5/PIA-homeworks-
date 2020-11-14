@@ -78,3 +78,35 @@ div.drugi{
     width: 30%;
     background-color: #A2B964;
 }
+p.quotebubble{
+    font-style: italic ;
+}
+footer{
+background-color: #A2B964;
+text-align:center;
+max-width:53.7%;
+padding: 0.5rem;
+margin:0 auto;
+box-shadow: 5px 5px 5px #EEEEEE;
+
+}
+dl.k{
+    padding:15px;
+    font-size:12pt;
+    font-family: Arial;
+}
+dd.k{
+     padding:15px;
+    font-size:12pt;
+
+}
+ul{
+    list-style-type: none;
+    margin:0;
+    padding: 0;
+
+
+}
+#w3c{
+    float: right;
+}
