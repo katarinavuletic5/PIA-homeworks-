@@ -51,3 +51,30 @@ div.pod{
     align-self:center;
 
 }
+span.p{
+    font-size:48px;
+    font-weight:bold;
+    color:red;
+    margin-top: 20px;
+}
+p.p{
+    font-size:13pt;
+    margin-bottom: 15px;
+}
+img.m{
+    float: left;
+    margin-right:5px;
+    margin-left: 15px;
+}
+div.o{
+    padding-top: 15px;
+    font-weight: bold;
+    font-size:12pt;
+    font-family: Arial;
+}
+
+div.drugi{
+    float : left;
+    width: 30%;
+    background-color: #A2B964;
+}
