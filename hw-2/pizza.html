@@ -11,6 +11,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="pizza.css" > 
 
 
 </head>
@@ -34,9 +35,9 @@
 <br>
 <br>
 
-<div class="container pt-3" >
-  <h1 id="Onama">O nama</h1>
-<p>
+<div  id="Onama" class="container pt-3" >
+  <h1>O nama</h1>
+<p id="onama">
     Picerija Don se nalazi u Parku Svetog Save u Kragujevcu. Očekuje Vas prijatna atmosfera i odlična usluga.Slažemo se da je dobra pica u dobroj kućnoj atmosferi uvek dobitna kombinacija. Zato se dostava na teritoriji Niša se ne naplaćuje.Dok čekate posluženje, u piceriji Don možete poručiti i razna osveženja.Tu smo i za vaše proslave. Poručivanje i zakazivanje termina u napred je moguće u piceriji Don. Napravite žurku a ne gomilu posuđa.I samo uživajte.
 </p>
 </div>
@@ -316,33 +317,33 @@
             <div class="form-group">
                 <label>Ime i prezime:</label>
                 <input type="text" class="form-control" required>
-                <div class="valid-feedback">Ispravno.</div>
-                <div class="invalid-feedback">Molim Vas, unesite Vase ime i prezime.</div>
+                <div class="valid-feedback" id="text">Ispravno.</div>
+                <div class="invalid-feedback" id="text">Molim Vas, unesite Vase ime i prezime.</div>
             </div>
 
             <div class="form-group">
                   <label>Email:</label>
                   <input type="email" class="form-control" required>
-                  <div class="valid-feedback">Ispravno.</div>
-                  <div class="invalid-feedback">Molim Vas, unesite Vasu email adresu.</div>
+                  <div class="valid-feedback" id="text">Ispravno.</div>
+                  <div class="invalid-feedback" id="text">Molim Vas, unesite Vasu email adresu.</div>
             </div>
 
             <div class="form-group">
                   <label>Broj telefona:</label>
                   <input type="text" class="form-control" required>
-                  <div class="valid-feedback">Ispravno.</div>
-                  <div class="invalid-feedback">Molim Vas, unesite Vas broj telefona.</div>
+                  <div class="valid-feedback" id="text">Ispravno.</div>
+                  <div class="invalid-feedback" id="text">Molim Vas, unesite Vas broj telefona.</div>
             </div>
 
             <div class="form-group">
                   <label>Poruka:</label>
                   <textarea class="form-control" required></textarea>
-                  <div class="valid-feedback">Ispravno.</div>
-                  <div class="invalid-feedback">Molim Vas, ostavite poruku.</div>
+                  <div class="valid-feedback" id="text">Ispravno.</div>
+                  <div class="invalid-feedback" id="text">Molim Vas, ostavite poruku.</div>
             </div>
 
             <div class="form-group">
-                  <button class="btn btn-primary">Posalji podatke</button>
+                  <button class="btn btn-primary">Prosledite podatke</button>
             </div>
             </form>
     </div>
