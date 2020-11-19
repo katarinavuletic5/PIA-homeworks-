@@ -1,1 +1,27 @@
 
+#onama{
+        font-size:12pt;
+        font-family: "Times New Roman";
+}
+#text{
+    font-style: italic;
+}
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 70px;
+    text-align: center;
+    margin: 5px 2px;
+    color:white;
+}
+.fa-facebook {
+    background: #3B5998;
+}
+
+.fa-twitter {
+    background: #55ACEE;
+}
+.fa-instagram {
+    background: #ea4c89;
+}
+
