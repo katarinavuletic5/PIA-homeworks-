@@ -8,20 +8,42 @@
 }
 .fa {
     padding: 20px;
-    font-size: 30px;
-    width: 70px;
+    font-size: 15px;
+    width: 55px;
     text-align: center;
     margin: 5px 2px;
     color:white;
+    border-radius: 50%;
 }
 .fa-facebook {
-    background: #3B5998;
+    background: grey;
 }
 
 .fa-twitter {
-    background: #55ACEE;
+    background: grey;
 }
 .fa-instagram {
-    background: #ea4c89;
+    background: grey;
 }
+* {
+    box-sizing: border-box;
+}
+.btn-primary {
+    background-color: black;
+}
+#btn{
+   float:right;
+   width:30%;
+
+}
+#naslov{
+    padding:15px;
+    font-size:28pt;
+}
+#naslov1{
+    font-size: 20pt;
+    text-align:center;
+    font-style: italic ;
+}
+
 
