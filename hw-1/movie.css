@@ -21,14 +21,24 @@ div.celo{
     margin:auto;
     display:flex;
 }
-div.b{
-    float: left;
-    width: 70%;
+footer{
+    background-color: #A2B964;
+    text-align:center;
+    max-width:53.7%;
+    padding: 0.5rem;
+    margin: auto;
+    box-shadow: 5px 5px 5px #EEEEEE;
 }
 div.pod{
     background-image: url("images/rbg.png") ;
     display:flex;
     margin-bottom:1rem;
+}
+span.p{
+    font-size:48px;
+    font-weight:bold;
+    color:red;
+    margin-top: 20px;
 }
 .flex-container {
     display: flex;
@@ -47,20 +57,27 @@ div.pod{
     padding: 1rem;
     align-self:center;
 }
-span.p{
-    font-size:48px;
-    font-weight:bold;
-    color:red;
-    margin-top: 20px;
+img.m{
+    float: left;
+    margin-right:5px;
+    margin-left: 15px;
 }
 p.p{
     font-size:13pt;
     margin-bottom: 15px;
 }
-img.m{
-    float: left;
-    margin-right:5px;
-    margin-left: 15px;
+p.quotebubble{
+    font-style: italic ;
+}
+div.drugi{
+    float : left;
+    width: 30%;
+    background-color: #A2B964;
+}
+dl.k{
+    padding:15px;
+    font-size:12pt;
+    font-family: Arial;
 }
 div.o{
     padding-top: 15px;
@@ -68,33 +85,8 @@ div.o{
     font-size:12pt;
     font-family: Arial;
 }
-div.drugi{
-    float : left;
-    width: 30%;
-    background-color: #A2B964;
-}
 img.k{
-    width: 100%;;
-}
-p.quotebubble{
-    font-style: italic ;
-}
-footer{
-background-color: #A2B964;
-text-align:center;
-max-width:53.7%;
-padding: 0.5rem;
-margin:0 auto;
-box-shadow: 5px 5px 5px #EEEEEE;
-}
-dl.k{
-    padding:15px;
-    font-size:12pt;
-    font-family: Arial;
-}
-dd.k{
-     padding:15px;
-    font-size:12pt;
+    width: 100%;
 }
 ul{
     list-style-type: none;
