@@ -1,0 +1,15 @@
+* {
+    box-sizing:border-box;
+}
+
+.panel-body{
+    font-style:italic;
+}
+.panel-heading{
+    font-weight:bold;
+}
+.pocetak{
+    float:right;
+    padding: 10px;
+    margin: 15px;
+}
