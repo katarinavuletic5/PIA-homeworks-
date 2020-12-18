@@ -1,11 +1,30 @@
 <!DOCTYPE html>
 <html>
-<head>
-</head>
-<body>
+    <head>
+       <link rel="stylesheet" href="kviz.css">
+       <title>Kviz</title>
+       <meta charset="utf-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1">
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>    
+    </head>
+    <body>
+        <div id="pitanje" class="pitanje">
+            <p id="brojpitanja" class="broj-pitanja"></p>
+            <input id="postavljenopitanje" class="postavljenopitanje" type="text"  >
+            <div id="ponudjeni-odgovori" class="ponudjeni-odgovori">
+            <input id="odg1" type="button" value="" onclick="proveriOdgovor(this.id)">
+            <input id="odg2" type="button" value="" onclick="proveriOdgovor(this.id)">
+            <input id="odg3" type="button" value="" onclick="proveriOdgovor(this.id)">
+            <input id="odg4" type="button" value="" onclick="proveriOdgovor(this.id)">
+        </div>
+            <input type="button" id="preskoci" class="preskoci" value="Прескочи" onclick="preskoci()">
+            <input type="button" id="napusti" class="napusti" value="Напусти игру" onclick="napusti()">
+        </div>
 
 
 
-
-</body>
-</html>
+        <script src="kviz.js"></script>
+    </body>
+</html> 
