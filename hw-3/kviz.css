@@ -13,3 +13,41 @@
     padding: 10px;
     margin: 15px;
 }
+.broj-pitanja{
+    font-weight:bold;
+    text-align:center;
+   
+}
+.postavljenopitanje {
+    width:100%;
+    padding:12px;
+    font-weight:bold;
+    font-size:18px;
+    background-color:#EEEEEE;
+    text-align:center;"
+}
+
+
+.ponudjeni-odgovori {
+    margin-top:20px;
+    display:grid;
+    grid-template-columns:repeat(2,auto);
+    
+}
+.preskoci {
+     float:right; 
+     margin:20px; 
+     background-color:#EEEEEE;
+     width:20%;
+     padding:12px;
+     font-weight:bold;
+}
+
+.napusti {
+     margin:20px; 
+     background-color:#EEEEEE;
+     width:20%;
+     padding:12px;
+     font-weight:bold;
+}
+
