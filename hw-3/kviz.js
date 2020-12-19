@@ -5,6 +5,7 @@ function clickButton() {
 
 var indexpitanja=0;
 var rezultat=0;
+var tajmer;
 
 var kvizpitanjaJSON={
         "pitanje1":{
@@ -122,15 +123,51 @@ ucitajPitanja(indexpitanja);
 
 function preskoci() {
     ++indexpitanja;
+    resetujTajmer();
     alert("Одговор ће се сматрати нетачним.");
     ucitajPitanja(indexpitanja);
 }
 
-function napusti() {
+function startujTajmer(trajanje, display) {
+        tajmer=trajanje;
+        var minuti, sekunde;
+        sekund=setInterval(function () {
+        minuti=parseInt(tajmer / 60, 10)
+        sekunde=parseInt(tajmer % 60, 10);
+
+        minuti=minuti < 10 ? "0" + minuti : minuti;
+        sekunde=sekunde < 10 ? "0" + sekunde : sekunde;
+
+        display.textContent=minuti + ":" + sekunde;
+
+
+        if (--tajmer<0) {
+            alert("Време је истекло! Одговор ће се сматрати нетачним.");
+            ucitajPitanja(++indexpitanja);
+            tajmer=trajanje;
+        }
+    }, 1000);
+
+}
+
+function napusti() {  
     ++indexpitanja;
+    clearInterval(sekund);
     alert("Крај игре. Ваш број поена је:" + rezultat);
     document.getElementById("pitanje").style.display="none";
 }
+
+function resetujTajmer() {
+     tajmer=20;
+}
+
+
+
+window.onload=function () {
+    dvadesetsekundi=20,
+    display=document.querySelector('#vreme');
+    startujTajmer(dvadesetsekundi, display);
+};
 
 
 function proveriOdgovor(clicked) {
@@ -138,10 +175,12 @@ function proveriOdgovor(clicked) {
     if(clickedButtonValue==tacno)
         {
             rezultat+= 1;
+            resetujTajmer();
             alert("Одговор је тачан.");
             ucitajPitanja(++indexpitanja);
         }
     else {
+        resetujTajmer();
         alert("Одговор је нетачан.");
         ucitajPitanja(++indexpitanja);
         
