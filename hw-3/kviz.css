@@ -38,6 +38,7 @@
     margin-top:20px;
     display:grid;
     grid-template-columns:repeat(2,auto);
+    margin:9px;
     
 }
 .preskoci {
@@ -47,6 +48,7 @@
      width:20%;
      padding:12px;
      font-weight:bold;
+     margin:9px;
 }
 
 .napusti {
@@ -58,8 +60,9 @@
 }
 .vreme{
     float:right;
-    color:green;
+    color:red;
     font-size:18px;
     font-weight:bold;
+    margin:9px;
 }
 
