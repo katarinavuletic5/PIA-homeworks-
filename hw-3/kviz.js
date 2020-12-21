@@ -85,7 +85,7 @@ var kvizpitanjaJSON={
             "ispravanodg":"REM"
         },
 
-        "pitanje8":{
+       "pitanje8":{
             "pitanja":"Које ће године Нови Сад бити Европска престоница културе?",
             "odgovori":[
                 "2021.",
@@ -94,18 +94,35 @@ var kvizpitanjaJSON={
                 "2024."
             ],
             "ispravanodg":"2021."
+        },
+
+
+
+     "pitanje9":{
+            "pitanja":"БИЛИНГВИЗАМ је:",
+           
+            "ispravanodg":"паралелно учење два језика"
+        },
+
+
+  "pitanje10":{
+            "pitanja":"Довршите изреку „Ко се мача лати ...“",
+           
+            "ispravanodg":"од мача и страда"
         }
 }
 
 
 function ucitajPitanja(indexpitanja)
 {
-    if(indexpitanja>7)
+    if(indexpitanja>9)
     {
         alert("Крај игре. Ваш број поена је:" + rezultat);
+        clearInterval(sekund);
         document.getElementById("pitanje").style.display = "none";
     }
     else{
+        if(indexpitanja<=7){
         $("#unos").hide();
         $("#proveri").hide();
        tacno=kvizpitanjaJSON["pitanje" + (indexpitanja+1)].ispravanodg;
@@ -117,8 +134,24 @@ function ucitajPitanja(indexpitanja)
         document.getElementById("odg2").value=kvizpitanjaJSON["pitanje" + (indexpitanja+1)].odgovori[1];
         document.getElementById("odg3").value=kvizpitanjaJSON["pitanje" + (indexpitanja+1)].odgovori[2];
         document.getElementById("odg4").value=kvizpitanjaJSON["pitanje" + (indexpitanja+1)].odgovori[3];
+    }
+     else{
+          $("#unos").show();
+          $("#proveri").show();
+          $("#odg1").hide();
+          $("#odg2").hide();
+          $("#odg3").hide();
+          $("#odg4").hide();
+          tacno=kvizpitanjaJSON["pitanje" + (indexpitanja+1)].ispravanodg;
+
+          document.getElementById("brojpitanja").innerHTML=(indexpitanja+1) + ". Питање:"
+          document.getElementById("postavljenopitanje").value=kvizpitanjaJSON["pitanje" + (indexpitanja+1)].pitanja;
+
+
 
     }
+
+  }
 }
 ucitajPitanja(indexpitanja);
 
@@ -188,6 +221,20 @@ function proveriOdgovor(clicked) {
         
     }    
 }
-
+function proveri() {  
+      if (document.getElementById('unos').value== tacno){ 
+			rezultat+=1;
+            resetujTajmer();
+			alert("Одговор је тачан.");
+            document.getElementById('unos').value = '';
+            ucitajPitanja(++indexpitanja);
+		}
+		else { 	
+                resetujTajmer();													
+		        alert("Одговор је нетачан.");
+                document.getElementById('unos').value = '';
+                ucitajPitanja(++indexpitanja);
+		}
+	}
 
 
