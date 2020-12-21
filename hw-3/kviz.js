@@ -119,6 +119,7 @@ function ucitajPitanja(indexpitanja)
     {
         alert("Крај игре. Ваш број поена је:" + rezultat);
         clearInterval(sekund);
+	$("#vreme").remove();
         document.getElementById("pitanje").style.display = "none";
     }
     else{
@@ -188,6 +189,7 @@ function startujTajmer(trajanje, display) {
 function napusti() {  
     ++indexpitanja;
     clearInterval(sekund);
+    $("#vreme").remove();
     alert("Крај игре. Ваш број поена је:" + rezultat);
     document.getElementById("pitanje").style.display="none";
 }
