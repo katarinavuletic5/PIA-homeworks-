@@ -106,6 +106,8 @@ function ucitajPitanja(indexpitanja)
         document.getElementById("pitanje").style.display = "none";
     }
     else{
+        $("#unos").hide();
+        $("#proveri").hide();
        tacno=kvizpitanjaJSON["pitanje" + (indexpitanja+1)].ispravanodg;
 
         document.getElementById("brojpitanja").innerHTML=(indexpitanja+1) + ". Питање:"
