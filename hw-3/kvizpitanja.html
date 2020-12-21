@@ -11,10 +11,13 @@
        <script src="path/to/js/folder/timer.js"></script>
     </head>
     <body>
+        <div style="background-image: url('image/kviz2.jpg')";>
         <span id="vreme" class="vreme">00:20</span>
         <div id="pitanje" class="pitanje">
             <p id="brojpitanja" class="broj-pitanja"></p>
             <input id="postavljenopitanje" class="postavljenopitanje" type="text"  >
+            <input type="text" class="unos" id="unos" placeholder="Унесите одговор"><br>
+            <input type="button" id="proveri" class="proveri" value="Провери" onclick="proveri()">
             <div id="ponudjeni-odgovori" class="ponudjeni-odgovori">
             <input id="odg1" type="button" value="" onclick="proveriOdgovor(this.id)">
             <input id="odg2" type="button" value="" onclick="proveriOdgovor(this.id)">
