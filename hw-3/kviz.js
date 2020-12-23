@@ -120,6 +120,8 @@ function ucitajPitanja(indexpitanja)
         alert("Крај игре. Ваш број поена је:" + rezultat);
         clearInterval(sekund);
 	$("#vreme").remove();
+	$("#t").remove();
+        $("#n").remove();
         document.getElementById("pitanje").style.display = "none";
     }
     else{
@@ -155,7 +157,8 @@ function ucitajPitanja(indexpitanja)
   }
 }
 ucitajPitanja(indexpitanja);
-
+ $("#t").hide();
+ $("#n").hide();
 
 function preskoci() {
     ++indexpitanja;
@@ -211,12 +214,22 @@ function proveriOdgovor(clicked) {
     clickedButtonValue=document.getElementById(clicked).value;
     if(clickedButtonValue==tacno)
         {
+	    $("#t").show();
+   
+            setInterval(() => {
+                   $("#t").hide();
+            }, 1000);
             rezultat+= 1;
             resetujTajmer();
             alert("Одговор је тачан.");
             ucitajPitanja(++indexpitanja);
         }
     else {
+	 $("#n").show();
+   
+         setInterval(() => {
+                $("#n").hide();
+         }, 1000);
         resetujTajmer();
         alert("Одговор је нетачан.");
         ucitajPitanja(++indexpitanja);
@@ -225,13 +238,24 @@ function proveriOdgovor(clicked) {
 }
 function proveri() {  
       if (document.getElementById('unos').value== tacno){ 
-			rezultat+=1;
+	      
+	    $("#t").show();
+   
+            setInterval(() => {
+                   $("#t").hide();
+            }, 1000);
+            rezultat+=1;
             resetujTajmer();
 			alert("Одговор је тачан.");
             document.getElementById('unos').value = '';
             ucitajPitanja(++indexpitanja);
 		}
 		else { 	
+	        $("#n").show();
+   
+                setInterval(() => {
+                   $("#n").hide();
+                }, 1000);
                 resetujTajmer();													
 		        alert("Одговор је нетачан.");
                 document.getElementById('unos').value = '';
