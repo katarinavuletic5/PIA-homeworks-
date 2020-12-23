@@ -221,7 +221,7 @@ function proveriOdgovor(clicked) {
             }, 1000);
             rezultat+= 1;
             resetujTajmer();
-            alert("Одговор је тачан.");
+            
             ucitajPitanja(++indexpitanja);
         }
     else {
@@ -231,7 +231,7 @@ function proveriOdgovor(clicked) {
                 $("#n").hide();
          }, 1000);
         resetujTajmer();
-        alert("Одговор је нетачан.");
+       
         ucitajPitanja(++indexpitanja);
         
     }    
@@ -246,7 +246,7 @@ function proveri() {
             }, 1000);
             rezultat+=1;
             resetujTajmer();
-			alert("Одговор је тачан.");
+		
             document.getElementById('unos').value = '';
             ucitajPitanja(++indexpitanja);
 		}
@@ -257,7 +257,7 @@ function proveri() {
                    $("#n").hide();
                 }, 1000);
                 resetujTajmer();													
-		        alert("Одговор је нетачан.");
+		
                 document.getElementById('unos').value = '';
                 ucitajPitanja(++indexpitanja);
 		}
