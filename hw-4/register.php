@@ -8,15 +8,15 @@
 <body>  
 <div class="container">
 <h2>REGISTER</h2>
- <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"> 
+ <form method="post" action="register.php"> 
   <?php include('errors.php'); ?> 
   <input type="text" name="name" placeholder="Name">
   <br><br>
   <input type="text" name="surname"  placeholder="Surname">
   <br><br>
-  <input type="text" name="username" placeholder="Username">
+  <input type="text" name="username" placeholder="Username" value="<?php echo $username; ?>">
   <br><br>
-  <input type="text" name="email"  placeholder="E-mail">
+  <input type="text" name="email"  placeholder="E-mail" value="<?php echo $email; ?>">
   <br><br>
   <input type="password" name="password"  placeholder="Password">
   <br><br>
