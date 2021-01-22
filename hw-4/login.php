@@ -8,13 +8,13 @@
 <body>
 <div class="container">
 <h2>LOGIN</h2>
- <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+ <form method="post" action="login.php">
   <?php include('errors.php'); ?> 
   <input type="text" name="username"  placeholder="Username or E-mail">
   <br><br>
   <input type="password" name="password"  placeholder="Password">
   <br><br>
-  <button type="submit" class="btn" name="login_user"> Login </button> 
+  <button type="submit" class="btn" name="login_user">Login</button> 
   <br><br>            
   <a href="register.php">Regsiter</a> 
  </form>
