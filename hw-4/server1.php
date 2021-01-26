@@ -1,16 +1,10 @@
 <?php 
 session_start(); 
 
-	
+$genre = "";	
 $title = "";
-$errors = array(); 
-$_SESSION['success'] = "";
-
-	
+$errors = array(); 	
 $db = mysqli_connect('localhost', 'root', '', 'registration');
-
-
-
 
 
 // ADMINISTRATOR
@@ -40,18 +34,17 @@ if (isset($_POST['add_movie'])) {
 		
 		
  
-    $movies_check_query = "SELECT * FROM movies WHERE title='$title' LIMIT 1";
-    $result = mysqli_query($db, $movies_check_query);
-    $movies = mysqli_fetch_assoc($result);
+    $movie_check_query = "SELECT * FROM movie WHERE title='$title' OR genre='$genre' LIMIT 1";
+    $result = mysqli_query($db, $movie_check_query);
+    $movie = mysqli_fetch_assoc($result);
   
   
 		
 		
     if (count($errors) == 0) {
-			$query = "INSERT INTO movies (title, genre, screenwriter, director, production, year, duration, actor, description, img) 
+			$query = "INSERT INTO movie (title, genre, screenwriter, director, production, year, duration, actor, description, img) 
 					  VALUES('$title', '$genre', '$screenwriter', '$director', '$production', '$year', '$duration', '$actor', '$description', '$img')"; 
 			mysqli_query($db, $query);
-			
 			$_SESSION['title'] = $title; 
 			$_SESSION['success'] = "You added a movie!"; 
 			header('location: home1.php'); 	
