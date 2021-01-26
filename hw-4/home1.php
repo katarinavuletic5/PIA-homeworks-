@@ -1,19 +1,5 @@
 <?php 
 	session_start(); 
-
-
-	if (!isset($_SESSION['title'])) {
-		$_SESSION['msg'] = "You have to log in first";
-		header('location: administrator.php');
-	}
-
-	
-	
-	if (isset($_GET['delete'])) {
-		session_destroy();
-		unset($_SESSION['title']);
-	}
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -36,7 +22,7 @@
 
 		<?php  if (isset($_SESSION['title'])) : ?>
 			<p>You added a movie  <strong><?php echo $_SESSION['title']; ?></strong></p>
-			<a href="administrator.php">Delete</a>
+			<a href="administrator.php">Add a new movie</a>
 		<?php endif ?>
 		
 </div>
