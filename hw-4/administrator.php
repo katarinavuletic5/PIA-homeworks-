@@ -28,25 +28,26 @@
 <div class="container">
 <h2>Add a movie</h2>
  <form method="post" action="administrator.php">
-  <input name="title" type="text" placeholder="Title">
+  <?php include('errors.php'); ?> 
+  <input type="text" name="title"  placeholder="Title" value="<?php echo $title; ?>">
   <br><br>
-  <input name="genre" type="text" placeholder="Genre" >
+  <input type="text" name="genre" placeholder="Genre" value="<?php echo $genre; ?>">
   <br><br>
-  <input name="screenwriter" type="text" placeholder="Screenwriter" >
+  <input type="text" name="screenwriter" placeholder="Screenwriter" >
   <br><br>
-  <input name="director" type="text" placeholder="Director" >
+  <input type="text" name="director" placeholder="Director" >
   <br><br>
-  <input name="production" type="text" placeholder="Production house" >
+  <input type="text" name="production" placeholder="Production house" >
   <br><br>
-  <input name="year" type="text" placeholder="Year of issue" >
+  <input type="text" name="year" placeholder="Year of issue" >
   <br><br>
-  <input name="duration" type="text" placeholder="Duration in minutes" >
+  <input type="text" name="duration" placeholder="Duration in minutes" >
   <br><br>
-  <input  name="actor" type="text" placeholder="List of actors" >
+  <input type="text" name="actor" placeholder="List of actors" >
   <br><br>
-  <textarea name="description" rows="5" cols="40" placeholder="A shorter description"></textarea>
+  <textarea type="text" name="description" rows="5" cols="40" placeholder="A shorter description"></textarea>
   <br><br>
-  <input name="img" type="file" accept="image/*">
+  <input type="file" name="img" accept="image/*">
   <br><br><br><br>
   <button type="submit" class="btn" name="add_movie">Add a movie</button> 
   <br><br>            
