@@ -8,24 +8,6 @@
 <body>
 
 <div class="container">
-		<?php if (isset($_SESSION['success'])) : ?>
-			<div class="error success" >
-					<?php 
-						echo $_SESSION['success']; 
-						unset($_SESSION['success']);
-					?>
-			</div>
-		<?php endif ?>
-      
-		<?php  if (isset($_SESSION['username'])) : ?>
-			<p>Welcome <strong><?php echo $_SESSION['username']; ?></strong></p>
-			<br><br><br><br>
-			<a href="login.php">Logout</a>
-		<?php endif ?>
-		
-</div>
-<br><br><br><br><br><br><br><br><br><br><br>
-<div class="container">
 <h2>Add a movie</h2>
  <form method="post" action="administrator.php">
   <?php include('errors.php'); ?> 
