@@ -1,4 +1,4 @@
-<?php include('server.php') ?> 
+<?php include('server1.php') ?> 
 <!DOCTYPE HTML>
 <html> 
 <head>
@@ -7,28 +7,9 @@
 </head> 
 <body>
 
-
 <div class="container">
-		<?php if (isset($_SESSION['success'])) : ?>
-			<div class="error success" >
-					<?php 
-						echo $_SESSION['success']; 
-						unset($_SESSION['success']);
-					?>
-			</div>
-		<?php endif ?>
-      
-		<?php  if (isset($_SESSION['username'])) : ?>
-			<p>Welcome <strong><?php echo $_SESSION['username']; ?></strong></p>
-			<br><br><br><br>
-			<a href="login.php">Logout</a>
-		<?php endif ?>
-		
-</div>
-<br><br><br><br><br><br><br><br><br><br><br>
-<div class="container">
- <form>
-  <label for="cars">Film rating:</label>
+  <form> 
+  <label for="rating">Film rating:</label>
   <select>
     <option>1</option>
     <option>2</option>
