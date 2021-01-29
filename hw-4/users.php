@@ -28,14 +28,5 @@ echo "</table>";
 $conn->close();
 ?>
 </table>
-  <form action="delete.php" method="post">
-
-        ID MOVIE TO DELETE:&nbsp;<input type="text" name="id" ><br>
-
-        <input type="submit" name="delete" value="DELETE">
-
- </form>
-		
-<a href="administrator.php">Add a new movie</a>
 </body>
 </html>
