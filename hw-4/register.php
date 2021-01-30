@@ -74,9 +74,8 @@
     <div class="navbar-header">
       <a class="navbar-brand" href="#">IMDB</a>
     </div>
-    <ul class="nav navbar-nav">
+       <ul class="nav navbar-nav">
       <li class="active"><a href="#home">Home</a></li>
-      <li><a href="users.php" >Users</a></li>
       <li><a href="movies.php" >Movies</a></li>
 	  
   
