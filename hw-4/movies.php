@@ -35,8 +35,18 @@ $conn->close();
         <input type="submit" name="delete" value="DELETE">
 
  </form>
-		
+<br>
+
+<form action="view.php" method="post">
+
+        ID MOVIE TO VIEW:&nbsp;<input type="text" name="id" ><br>
+
+        <input type="submit" name="view" value="VIEW">
+
+ </form>
+<br>	
 <a href="administrator.php">Add a new movie</a>
+		
 
 </body>
 </html>
